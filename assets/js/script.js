@@ -89,6 +89,12 @@ var questions = [
     }
     setTimeout(nextQuestion, 2000);
   }
-  
+  var startButton = "start-button";
+
+  function startQuiz() {
+      
+  }
+
   renderQuestion();
+  startButton.addEventListener("click", startQuiz);
   optionListEl.addEventListener("click", checkAnswer);
