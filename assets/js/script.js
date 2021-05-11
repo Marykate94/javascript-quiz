@@ -11,7 +11,12 @@ var questions = [
       answer: "parentheses",
     },
   ];
-  
+// create "start game" button
+
+
+//add ability to save initials and score
+
+
   var questionEl = document.querySelector("#question");
   var optionListEl = document.querySelector("#option-list");
   var questionResultEl = document.querySelector("#question-result");
@@ -20,7 +25,7 @@ var questions = [
   var questionIndex = 0;
   var correctCount = 0;
   
-  var time = 20;
+  var time = 60;
   var intervalId;
   
   function endQuiz() {
