@@ -11,7 +11,6 @@ var questions = [
       answer: "parentheses",
     },
   ];
-// create "start game" button
 
 
 //add ability to save initials and score
@@ -27,6 +26,21 @@ var questions = [
   
   var time = 60;
   var intervalId;
+
+  // create start button 
+
+  var button =
+  document.createElement("button");
+  button.innerHTML = "Start Quiz";
+
+  var body = document.getElementsByTagName("body")
+  [0];
+  body.appendChild(button);
+
+  button.addEventListener ("click", 
+  function() {
+      
+  });
   
   function endQuiz() {
     clearInterval(intervalId);
@@ -89,12 +103,12 @@ var questions = [
     }
     setTimeout(nextQuestion, 2000);
   }
-  var startButton = "start-button";
+//   var startButton = "start-button";
 
-  function startQuiz() {
-      
-  }
+//   function startQuiz() {
+
+//   }
 
   renderQuestion();
-  startButton.addEventListener("click", startQuiz);
+//   startButton.addEventListener("click", startQuiz);
   optionListEl.addEventListener("click", checkAnswer);
