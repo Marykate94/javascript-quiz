@@ -27,6 +27,9 @@ var questions = [
   var time = 60;
   var intervalId;
 
+  // create start game function 
+  function startGame() {
+
   // create start button 
 
   var button =
@@ -37,7 +40,9 @@ var questions = [
   [0];
   body.appendChild(button);
 
-  button.addEventListener ("click", questions);
+  button.addEventListener ("click", renderQuestion);
+  }
+
   
   function endQuiz() {
     clearInterval(intervalId);
