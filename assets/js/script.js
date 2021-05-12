@@ -41,11 +41,12 @@ var questions = [
   // create start game function 
   function startGame() {
     // call update time
+    intervalId;
     timerEl.textContent = time;
     updateTime();
     renderQuestion();
 
-  }
+  };
 
   
   function endQuiz() {
