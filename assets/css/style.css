@@ -1,0 +1,9 @@
+#timer {
+    display: flex;
+    justify-content: flex-end;
+    color: purple;
+}
+
+#option-list {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}

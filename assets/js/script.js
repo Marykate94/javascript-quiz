@@ -37,10 +37,7 @@ var questions = [
   [0];
   body.appendChild(button);
 
-  button.addEventListener ("click", 
-  function() {
-      
-  });
+  button.addEventListener ("click", questions);
   
   function endQuiz() {
     clearInterval(intervalId);
