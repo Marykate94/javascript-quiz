@@ -111,6 +111,7 @@ var questions = [
 
 //   }
 
-  renderQuestion();
+//   renderQuestion();
 //   startButton.addEventListener("click", startQuiz);
   optionListEl.addEventListener("click", checkAnswer);
+ startGame();
