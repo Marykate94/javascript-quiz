@@ -27,11 +27,7 @@ var questions = [
   var time = 60;
   var intervalId;
 
-  // create start game function 
-  function startGame() {
-
-  // create start button 
-
+  // create start button
   var button =
   document.createElement("button");
   button.innerHTML = "Start Quiz";
@@ -40,7 +36,15 @@ var questions = [
   [0];
   body.appendChild(button);
 
-  button.addEventListener ("click", renderQuestion);
+  button.addEventListener ("click", startGame);
+
+  // create start game function 
+  function startGame() {
+    // call update time
+    timerEl.textContent = time;
+    updateTime();
+    renderQuestion();
+
   }
 
   
@@ -51,20 +55,19 @@ var questions = [
   }
   
   function updateTime() {
-    time--;
-    timerEl.textContent = time;
-    if (time <= 0) {
-      endQuiz();
+    if (time == 0) {
+        time--;
+        timerEl.textContent = time;
+        if (time <= 0) {
+          endQuiz();
+        }
+      return;
     }
+  
   }
   
   function renderQuestion() {
     
-    if (time == 0) {
-      updateTime();
-      return;
-    }
-  
     intervalId = setInterval(updateTime, 1000);
     
     questionEl.textContent = questions[questionIndex].question;
@@ -114,4 +117,3 @@ var questions = [
 //   renderQuestion();
 //   startButton.addEventListener("click", startQuiz);
   optionListEl.addEventListener("click", checkAnswer);
- startGame();
