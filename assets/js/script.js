@@ -41,9 +41,9 @@ var questions = [
   // create start game function 
   function startGame() {
     // call update time
-    intervalId;
+    intervalId = setInterval(updateTime, 1000);
     timerEl.textContent = time;
-    updateTime();
+    // updateTime();
     renderQuestion();
 
   };
@@ -56,7 +56,7 @@ var questions = [
   }
   
   function updateTime() {
-    if (time == 0) {
+    // if (time == 0) {
         time--;
         timerEl.textContent = time;
         if (time <= 0) {
@@ -65,11 +65,11 @@ var questions = [
       return;
     }
   
-  }
+  
   
   function renderQuestion() {
     
-    intervalId = setInterval(updateTime, 1000);
+    // intervalId = setInterval(updateTime, 1000);
     
     questionEl.textContent = questions[questionIndex].question;
   
