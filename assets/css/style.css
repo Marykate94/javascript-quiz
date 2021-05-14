@@ -1,9 +1,13 @@
+/* style header */
+
+
+/* style timer */
 #timer {
     display: flex;
     justify-content: flex-end;
 
 }
-
+/* make option list numbered*/
 #option-list {
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     list-style-type: none; 
