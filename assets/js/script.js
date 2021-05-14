@@ -14,8 +14,8 @@ var questions = [
 
 
 //add ability to save initials and score
-
-
+// set array for saving initials into local storage
+  var scores = []
   var questionEl = document.querySelector("#question");
   var optionListEl = document.querySelector("#option-list");
   var questionResultEl = document.querySelector("#question-result");
