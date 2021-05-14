@@ -40,11 +40,13 @@ button.addEventListener("click", startGame);
 
 // create start game function 
 function startGame() {
+    // remove button after clicked 
+    button.remove();
     // call update time
-
     timerEl.textContent = time;
     // updateTime();
     renderQuestion();
+    removeButton();
 
 };
 
