@@ -20,6 +20,7 @@ var questionEl = document.querySelector("#question");
 var optionListEl = document.querySelector("#option-list");
 var questionResultEl = document.querySelector("#question-result");
 var timerEl = document.querySelector("#timer");
+var contentEl = document.querySelector("#button-div");
 
 var questionIndex = 0;
 var correctCount = 0;
@@ -34,29 +35,42 @@ var myobj = document.getElementById("intro");
 // para.innerText = "This is a paragraph";               // Insert text
 // document.body.appendChild(para);                      // Append <p> to <body>
 
-var button =
-    document.createElement("button");
-button.innerHTML = "Start Quiz";
+// var button =
+//     document.createElement("button");
+// button.innerHTML = "Start Quiz";
 
-var body = document.getElementsByTagName("body")
-[0];
-body.appendChild(button);
+// var body = document.getElementsByTagName("body")
+// [0];
+// body.appendChild(button);
 
-button.addEventListener("click", startGame);
+// button.addEventListener("click", startGame);
 
 // create start game function 
-function startGame() {
-    myobj.remove();
-    // remove button after clicked 
-    button.remove();
-    // call update time
-    timerEl.textContent = time;
-    // updateTime();
-    renderQuestion();
+// function startGame() {
+//     myobj.remove();
+//     // remove button after clicked 
+//     button.remove();
+//     // call update time
+//     timerEl.textContent = time;
+//     // updateTime();
+//     renderQuestion();
 
 
-};
+// };
+function startQuiz() {
+    //h2
+    h2 = document.createElement("h2");
+    h2.textContent = "Welcome";
+    h2.classList.add("title-content");
+    contentEl.appendChild(h2);
+    //button
+    button = document.createElement("button");
+    button.textContent = "Start Game";
+    button.setAttribute("id", "start-button");
+    contentEl.appendChild(button);
 
+    button.addEventListener("click", renderQuestion);
+}
 
 function endQuiz() {
     clearInterval(intervalId);
@@ -74,9 +88,9 @@ function updateTime() {
     return;
 }
 
-
-
 function renderQuestion() {
+    button.remove();
+    h2.remove();
 
     intervalId = setInterval(updateTime, 1000);
 
@@ -120,7 +134,7 @@ function checkAnswer(event) {
     setTimeout(nextQuestion, 2000);
 }
 // create a local storage that connects to score = [] to save scores
-
+startQuiz();
 //   renderQuestion();
 //   startButton.addEventListener("click", startQuiz);
 optionListEl.addEventListener("click", checkAnswer);
