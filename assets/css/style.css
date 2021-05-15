@@ -4,7 +4,7 @@
 #timer {
     display: flex;
     justify-content: flex-end;
-
+    font-size:large;
 }
 /* make option list numbered*/
 #option-list {

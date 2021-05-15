@@ -27,7 +27,11 @@ var correctCount = 0;
 var time = 60;
 var intervalId;
 // create a function to suppress other parts from showing. ex: start quiz button once clicked is suppressed
-// create start button
+ // create start button
+// var para = document.createElement("P");               // Create a <p> element
+// para.innerText = "This is a paragraph";               // Insert text
+// document.body.appendChild(para);                      // Append <p> to <body>
+
 var button =
     document.createElement("button");
 button.innerHTML = "Start Quiz";
@@ -40,13 +44,14 @@ button.addEventListener("click", startGame);
 
 // create start game function 
 function startGame() {
+
     // remove button after clicked 
     button.remove();
     // call update time
     timerEl.textContent = time;
     // updateTime();
     renderQuestion();
-    removeButton();
+
 
 };
 
@@ -94,6 +99,10 @@ function nextQuestion() {
         time = 0;
     }
     renderQuestion();
+}
+
+function startQuiz() {
+
 }
 
 function checkAnswer(event) {
