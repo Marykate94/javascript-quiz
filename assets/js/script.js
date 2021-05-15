@@ -15,7 +15,7 @@ var questions = [
 
 //add ability to save initials and score
 // set array for saving initials into local storage
-var scores = []
+var scores = [];
 var questionEl = document.querySelector("#question");
 var optionListEl = document.querySelector("#option-list");
 var questionResultEl = document.querySelector("#question-result");
@@ -81,10 +81,26 @@ function endQuiz() {
     clearInterval(intervalId);
     var body = document.body;
     body.innerHTML = "Game over, You scored " + correctCount;
-
-    // add local storage and connect to var score array
+    }
     // add input for initials -- textInput command 
+
+var highScore = function() {
+    
+    // localStorage.setItem("Initials",create separate variable); 
+    var initialScoreObj = {
+        initials: 'initials',
+        scores: 'scores'
+    }
+    scores.push({
+        initialScoreObj
+    });    
+
+    localStorage.setItem('scores', JSON.stringify(scores))
 }
+
+   // add local storage and connect to var score array
+
+// add input for initials -- textInput command 
 
 function updateTime() {
     // if (time == 0) {
