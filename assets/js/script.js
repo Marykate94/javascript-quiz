@@ -85,7 +85,7 @@ function endQuiz() {
     // add input for initials -- textInput command 
 
 var highScore = function() {
-    
+    console.log();
     // localStorage.setItem("Initials",create separate variable); 
     var initialScoreObj = {
         initials: 'initials',
