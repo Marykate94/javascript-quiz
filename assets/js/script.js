@@ -83,7 +83,7 @@ function endQuiz() {
     body.innerHTML = "Game over, You scored " + correctCount;
 
     // add local storage and connect to var score array
-    
+    // add input for initials -- textInput command 
 }
 
 function updateTime() {
