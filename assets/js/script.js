@@ -63,6 +63,11 @@ function startQuiz() {
     h2.textContent = "Welcome";
     h2.classList.add("title-content");
     contentEl.appendChild(h2);
+    // p
+    p = document.createElement("p");
+    p.textContent = "hello there";
+    p.classList.add("title-content");
+    contentEl.appendChild(p);
     //button
     button = document.createElement("button");
     button.textContent = "Start Game";
@@ -91,6 +96,7 @@ function updateTime() {
 function renderQuestion() {
     button.remove();
     h2.remove();
+    p.remove();
 
     intervalId = setInterval(updateTime, 1000);
 
