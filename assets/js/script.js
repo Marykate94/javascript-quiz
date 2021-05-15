@@ -26,6 +26,8 @@ var correctCount = 0;
 
 var time = 60;
 var intervalId;
+var myobj = document.getElementById("intro");
+
 // create a function to suppress other parts from showing. ex: start quiz button once clicked is suppressed
  // create start button
 // var para = document.createElement("P");               // Create a <p> element
@@ -44,7 +46,7 @@ button.addEventListener("click", startGame);
 
 // create start game function 
 function startGame() {
-
+    myobj.remove();
     // remove button after clicked 
     button.remove();
     // call update time
@@ -101,9 +103,6 @@ function nextQuestion() {
     renderQuestion();
 }
 
-function startQuiz() {
-
-}
 
 function checkAnswer(event) {
     clearInterval(intervalId);
