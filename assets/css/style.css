@@ -1,6 +1,9 @@
 /* style button */
 #start-button {
-    background-color: plum;
+    background-color: purple;
+    color: white;
+    margin: auto;
+    font-size: 25px;
 }
 
 /* style timer */
@@ -11,10 +14,25 @@
 }
 /* make option list numbered*/
 #option-list {
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     list-style-type: none; 
 }
 
 #question {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
+
+h2 {
+    text-align: center;
+    font-size: 40px;
+}
+
+p {
+    text-align: center;
+    font-size: 20px;
+}
+
+body {
+    background-color: palegoldenrod;
+}
+

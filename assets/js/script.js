@@ -10,6 +10,18 @@ var questions = [
         choices: ["quotes", "curly brackets", "parentheses", "square brackets"],
         answer: "parentheses",
     },
+    {
+        question:
+            "What HTML element do we put the Javascript into?",
+        choices: ["<script>","<scripting>","<js>","<javascript>"],
+        answer: "<script>",
+    },
+    {
+        question: 
+            "Where is the correct place to insert a JavaScript?",
+        choices: ["The <head> section.","Both the <head> section and the <body> section are correct","The <body> section."],
+        answer: "the <body> section"
+    }
 ];
 
 
@@ -60,12 +72,12 @@ var myobj = document.getElementById("intro");
 function startQuiz() {
     //h2
     h2 = document.createElement("h2");
-    h2.textContent = "Welcome";
+    h2.textContent = "Coding Quiz Challenge";
     h2.classList.add("title-content");
     contentEl.appendChild(h2);
     // p
     p = document.createElement("p");
-    p.textContent = "hello there";
+    p.textContent = "Try to answer the following code related quiz questions. 2 seconds will be removed from the timer for every incorrect answer.Good luck!";
     p.classList.add("title-content");
     contentEl.appendChild(p);
     //button
